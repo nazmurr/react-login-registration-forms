@@ -4,5 +4,4 @@
 - remove unncessary comments and files
 - update readme
 - check with ai to see if anything else needed for codecanyon publish
-- publish to netlify
 - create demo images and pricing for codecanyone
