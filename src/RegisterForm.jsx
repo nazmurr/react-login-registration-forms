@@ -49,6 +49,7 @@ function RegisterForm() {
             }}
             validationSchema={validationSchema}
             onSubmit={(values, actions) => {
+              // You can also handle server-side integration here
               setTimeout(() => {
                 console.log("Form Data:", values);
                 actions.setSubmitting(false);
