@@ -9,7 +9,6 @@ import {
 } from "@mui/material";
 import { Formik, Form, Field } from "formik";
 import * as Yup from "yup";
-import styles from "./css/LoginForm.module.css";
 
 const validationSchema = Yup.object({
   email: Yup.string()
@@ -23,8 +22,17 @@ const validationSchema = Yup.object({
 function LoginForm() {
   return (
     <Container component="main" maxWidth="xs">
-      <Box className={styles.mainContainer}>
-        <Paper elevation={6} className={styles.paperContainer}>
+      <Box
+        display="flex"
+        flexDirection="column"
+        alignItems="center"
+        justifyContent="center"
+        minHeight="100vh"
+      >
+        <Paper
+          elevation={6}
+          style={{ padding: "20px", width: "100%", maxWidth: 360 }}
+        >
           <Typography variant="h5" component="h1" gutterBottom>
             Login
           </Typography>
@@ -68,7 +76,7 @@ function LoginForm() {
                   fullWidth
                   variant="contained"
                   color="primary"
-                  className={styles.submitButton}
+                  style={{ margin: "20px 0" }}
                   disabled={isSubmitting}
                 >
                   Log In

@@ -1,5 +1,5 @@
-- add validation https://chatgpt.com/c/79a19266-2a55-448a-87bb-5a064bfd8326
-- make the forms submission ready to api
+- add validation https://chatgpt.com/c/79a19266-2a55-448a-87bb-5a064bfd8326 (done)
+- make the forms submission ready to api (done)
 - remove inline styles
 - remove unncessary comments and files
 - update readme
