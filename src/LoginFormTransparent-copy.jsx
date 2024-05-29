@@ -10,7 +10,6 @@ import {
 import { Formik, Form, Field } from "formik";
 import * as Yup from "yup";
 import backgroundImage from "./background_img.jpg";
-import styles from "./css/LoginFormTransparent.module.css";
 
 const validationSchema = Yup.object({
   email: Yup.string()
@@ -24,8 +23,11 @@ const validationSchema = Yup.object({
 function LoginFormTransparent() {
   return (
     <Box
-      className={styles.loginFormContainer}
       sx={{
+        position: "relative",
+        width: "100vw",
+        height: "100vh",
+        backgroundColor: "transparent",
         "&::before": {
           content: '""',
           position: "absolute",
@@ -44,9 +46,25 @@ function LoginFormTransparent() {
       <Container
         component="main"
         maxWidth="xs"
-        className={styles.mainContainer}
+        sx={{
+          position: "relative",
+          zIndex: 2,
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          justifyContent: "center",
+          height: "100vh",
+        }}
       >
-        <Paper elevation={6} className={styles.loginPaper}>
+        <Paper
+          elevation={6}
+          sx={{
+            padding: "20px",
+            width: "100%",
+            maxWidth: 360,
+            backgroundColor: "rgba(255, 255, 255, 0.9)",
+          }}
+        >
           <Typography variant="h5" component="h1" gutterBottom>
             Login
           </Typography>
@@ -54,6 +72,7 @@ function LoginFormTransparent() {
             initialValues={{ email: "", password: "" }}
             validationSchema={validationSchema}
             onSubmit={(values, actions) => {
+              // You can also handle server-side integration here
               setTimeout(() => {
                 console.log("Form Data:", values);
                 actions.setSubmitting(false);
@@ -92,7 +111,7 @@ function LoginFormTransparent() {
                   fullWidth
                   variant="contained"
                   color="primary"
-                  className={styles.loginButton}
+                  sx={{ margin: "20px 0" }}
                   disabled={isSubmitting}
                 >
                   Log In
