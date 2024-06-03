@@ -10,6 +10,7 @@ import {
 import { Formik, Form, Field } from "formik";
 import * as Yup from "yup";
 import backgroundImage from "./background_img.jpg";
+import styles from "./css/RegisterFormTransparent.module.css";
 
 const validationSchema = Yup.object({
   name: Yup.string().required("Name is required"),
@@ -27,11 +28,8 @@ const validationSchema = Yup.object({
 function RegisterFormTransparent() {
   return (
     <Box
+      className={styles.registerFormContainer}
       sx={{
-        position: "relative",
-        width: "100vw",
-        height: "100vh",
-        backgroundColor: "transparent",
         "&::before": {
           content: '""',
           position: "absolute",
@@ -50,25 +48,9 @@ function RegisterFormTransparent() {
       <Container
         component="main"
         maxWidth="xs"
-        sx={{
-          position: "relative",
-          zIndex: 2,
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          justifyContent: "center",
-          height: "100vh",
-        }}
+        className={styles.mainContainer}
       >
-        <Paper
-          elevation={6}
-          sx={{
-            padding: "20px",
-            width: "100%",
-            maxWidth: 360,
-            backgroundColor: "rgba(255, 255, 255, 0.9)",
-          }}
-        >
+        <Paper elevation={6} className={styles.registerPaper}>
           <Typography variant="h5" component="h1" gutterBottom>
             Register
           </Typography>
@@ -142,7 +124,7 @@ function RegisterFormTransparent() {
                   fullWidth
                   variant="contained"
                   color="primary"
-                  sx={{ margin: "20px 0" }}
+                  className={styles.registerButton}
                   disabled={isSubmitting}
                 >
                   Register

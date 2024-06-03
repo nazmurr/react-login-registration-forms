@@ -2,6 +2,7 @@ import React from "react";
 import { TextField, Button, Paper, Typography, Box, Grid } from "@mui/material";
 import { Formik, Form, Field } from "formik";
 import * as Yup from "yup";
+import styles from "./css/RegisterFormSplit.module.css";
 
 const validationSchema = Yup.object({
   name: Yup.string().required("Name is required"),
@@ -18,37 +19,17 @@ const validationSchema = Yup.object({
 
 function RegisterFormSplit() {
   return (
-    <Grid
-      container
-      style={{ height: "100vh", width: "100vw", overflow: "hidden" }}
-    >
+    <Grid container className={styles.gridContainer}>
       <Grid item xs={12} sm={12} md={6}>
-        <Box
-          display="flex"
-          justifyContent="center"
-          alignItems="center"
-          height={{ xs: "auto", sm: "100%" }}
-          bgcolor="primary.main"
-          color="common.white"
-          p={3}
-        >
+        <Box className={styles.welcomeBox} height={{ xs: "auto", sm: "100%" }}>
           <Typography variant="h4" align="center">
             Join Our Community!
           </Typography>
         </Box>
       </Grid>
       <Grid item xs={12} sm={12} md={6}>
-        <Box
-          display="flex"
-          flexDirection="column"
-          alignItems="center"
-          justifyContent="center"
-          height={{ xs: "auto", sm: "100%" }}
-        >
-          <Paper
-            elevation={6}
-            style={{ padding: "20px", width: "100%", maxWidth: 360 }}
-          >
+        <Box className={styles.formBox} height={{ xs: "auto", sm: "100%" }}>
+          <Paper elevation={6} className={styles.paperContainer}>
             <Typography variant="h5" component="h1" gutterBottom>
               Register
             </Typography>
@@ -124,7 +105,7 @@ function RegisterFormSplit() {
                     fullWidth
                     variant="contained"
                     color="primary"
-                    style={{ margin: "20px 0" }}
+                    className={styles.submitButton}
                     disabled={isSubmitting}
                   >
                     Register

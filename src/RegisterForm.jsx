@@ -9,6 +9,7 @@ import {
 } from "@mui/material";
 import { Formik, Form, Field } from "formik";
 import * as Yup from "yup";
+import styles from "./css/RegisterForm.module.css";
 
 const validationSchema = Yup.object({
   name: Yup.string().required("Name is required"),
@@ -26,17 +27,8 @@ const validationSchema = Yup.object({
 function RegisterForm() {
   return (
     <Container component="main" maxWidth="xs">
-      <Box
-        display="flex"
-        flexDirection="column"
-        alignItems="center"
-        justifyContent="center"
-        minHeight="100vh"
-      >
-        <Paper
-          elevation={6}
-          style={{ padding: "20px", width: "100%", maxWidth: 360 }}
-        >
+      <Box className={styles.mainContainer}>
+        <Paper elevation={6} className={styles.paperContainer}>
           <Typography variant="h5" component="h1" gutterBottom>
             Register
           </Typography>
@@ -110,7 +102,7 @@ function RegisterForm() {
                   fullWidth
                   variant="contained"
                   color="primary"
-                  style={{ margin: "20px 0" }}
+                  className={styles.submitButton}
                   disabled={isSubmitting}
                 >
                   Register
