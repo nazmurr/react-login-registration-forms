@@ -2,7 +2,7 @@
 - make the forms submission ready to api (done)
 - remove inline styles (done)
 - remove unncessary comments and files (done)
-- test with older versions of node js
+- test with older versions of node js (minimum 16.x required)
 - fix this https://react-login-registration-forms.netlify.app/login
 - update readme
 - check with ai to see if anything else needed for codecanyon publish
