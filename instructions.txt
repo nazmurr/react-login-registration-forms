@@ -1,0 +1,4 @@
+- Unzip the file
+- go to the directory
+- run 'npm install' to install all dependencies
+- run 'npm start' to see the site
