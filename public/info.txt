@@ -1,7 +1,9 @@
-- add validation
-- make the forms submission ready to api
-- remove inline styles
-- remove unncessary comments and files
+- add validation https://chatgpt.com/c/79a19266-2a55-448a-87bb-5a064bfd8326 (done)
+- make the forms submission ready to api (done)
+- remove inline styles (done)
+- remove unncessary comments and files (done)
+- test with older versions of node js (minimum 16.x required)
+- fix this https://react-login-registration-forms.netlify.app/login
 - update readme
 - check with ai to see if anything else needed for codecanyon publish
 - create demo images and pricing for codecanyone
